@@ -1,3 +1,13 @@
+function initServiceWorker() {
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then((registration) => {
+      console.log(`Service Worker registered!! Scope: ${registration.scope}`)
+    }).catch((err) => {
+      console.log(`Service Worker failed!! error: ${err}`)
+    })
+  }
+}
+
 class App {
   constructor() {
     this.grid = document.querySelector('[data-grid]')
@@ -54,6 +64,10 @@ class App {
         this.state = "RESET"
         this.handleState()
       }
+    })
+
+    window.addEventListener('load', () => {
+      initServiceWorker()
     })
   }
 

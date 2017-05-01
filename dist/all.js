@@ -4,6 +4,16 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function initServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function (registration) {
+      console.log('Service Worker registered!! Scope: ' + registration.scope);
+    }).catch(function (err) {
+      console.log('Service Worker failed!! error: ' + err);
+    });
+  }
+}
+
 var App = function () {
   function App() {
     _classCallCheck(this, App);
@@ -64,6 +74,10 @@ var App = function () {
           _this.state = "RESET";
           _this.handleState();
         }
+      });
+
+      window.addEventListener('load', function () {
+        initServiceWorker();
       });
     }
   }, {
