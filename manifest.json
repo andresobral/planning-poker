@@ -1,0 +1,15 @@
+{
+  "short_name": "PlanningPoker",
+  "name": "Planning Poker Web App",
+  "icons": [
+    {
+      "src": "launcher-icon.png",
+      "type": "image/png",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000",
+  "theme_color": "#fff",
+  "display": "standalone"
+}
