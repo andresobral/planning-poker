@@ -1,15 +1,22 @@
 {
-  "short_name": "PlanningPoker",
+  "lang": "en",
   "name": "Planning Poker Web App",
+  "short_name": "Planning Poker",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#000",
   "icons": [
     {
-      "src": "launcher-icon.png",
-      "type": "image/png",
-      "sizes": "144x144"
+      "src": "/launcher-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/launcher-icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
     }
   ],
-  "start_url": "/",
-  "background_color": "#000",
-  "theme_color": "#fff",
-  "display": "standalone"
+  "orientation": "portrait"
 }
